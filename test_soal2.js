@@ -5,14 +5,12 @@ function contain(word) {
         i;
 
     for (i = 0; i < newArr.length; i++) {
-        if (newArr[i] * 0 == 0 || newArr[i] == "*") {
+        if (newArr[i] * 0 == 0) {
             containChar.push(newArr[i]);
         }
     }
 
-    if (Number(containChar.join("")) == "NaN") {
-        console.log(`Sistem kami menolak untuk inputan berisi simbol ${containChar.join("")}`);
-    } else if (Number(containChar.join("")) == 0) {
+    if (Number(containChar.join("")) === 0) {
         console.log(`Sistem memeriksa data anda valid dengan ketentuan kami dengan inputan ${word}`);
     } else {
         console.log(`Sistem kami menolak untuk inputan berisi angka ${containChar.join("")}`);
